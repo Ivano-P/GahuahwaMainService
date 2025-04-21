@@ -1,0 +1,6 @@
+@GahuahwaMainService_HostAddress = http://localhost:5219
+
+GET {{GahuahwaMainService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
