@@ -1,3 +1,4 @@
+using GahuahwaMainService.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GahuahwaMainService.Controllers;
@@ -11,7 +12,7 @@ public class WeatherForecastController : ControllerBase {
 
     private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger) {
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, AppDbContext appDbContext) {
         _logger = logger;
     }
 
