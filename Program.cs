@@ -1,6 +1,7 @@
 using GahuahwaMainService.Data;
 using GahuahwaMainService.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,15 @@ builder.Services
     .AddIdentityApiEndpoints<IdentityUser>()
     .AddEntityFrameworkStores<AppDbContext>();
 
+builder.Services.Configure<IdentityOptions>(options => {
+        options.Password.RequireDigit =  false;
+        options.Password.RequireLowercase = false;
+        options.Password.RequireUppercase = false;
+        
+        options.User.RequireUniqueEmail = true;
+    });
+
+//injecting DbContext with PostgreSQL
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DevConnection")));
 
@@ -35,4 +45,31 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app
+    .MapGroup("/api")
+    .MapIdentityApi<IdentityUser>();
+
+app.MapPost("/api/signup", async (
+    UserManager<IdentityUser> UserManager,
+    [FromBody] UserRegistrationModel userRegistrationModel
+) => {
+    IdentityUser user = new IdentityUser() {
+        Email = userRegistrationModel.Email,
+        UserName = userRegistrationModel.UserName,
+    };
+    var result = await UserManager.CreateAsync(user, userRegistrationModel.Password);
+    
+    if(result.Succeeded) {
+        return Results.Ok(result);
+    } else {
+        return Results.BadRequest(result);
+    }
+});
+
 app.Run();
+
+public class UserRegistrationModel {
+    public string Email { get; set; }
+    public string Password { get; set; }
+    public string UserName { get; set; }
+}

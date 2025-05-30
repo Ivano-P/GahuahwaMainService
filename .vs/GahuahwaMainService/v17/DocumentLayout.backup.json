@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Kerry\\DevProjects\\web\\Mangahuahwa-bookmarker\\backend\\GahuahwaMainService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F63B7130-2511-4CF5-9FB0-F3F695AC9918}|GahuahwaMainService.csproj|c:\\users\\kerry\\devprojects\\web\\mangahuahwa-bookmarker\\backend\\gahuahwamainservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F63B7130-2511-4CF5-9FB0-F3F695AC9918}|GahuahwaMainService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kerry\\DevProjects\\web\\Mangahuahwa-bookmarker\\backend\\GahuahwaMainService\\Migrations\\20250530115436_UsernameIsAddedInUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250530115436_UsernameIsAddedInUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F63B7130-2511-4CF5-9FB0-F3F695AC9918}|GahuahwaMainService.csproj|c:\\users\\kerry\\devprojects\\web\\mangahuahwa-bookmarker\\backend\\gahuahwamainservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F63B7130-2511-4CF5-9FB0-F3F695AC9918}|GahuahwaMainService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F63B7130-2511-4CF5-9FB0-F3F695AC9918}|GahuahwaMainService.csproj|c:\\users\\kerry\\devprojects\\web\\mangahuahwa-bookmarker\\backend\\gahuahwamainservice\\migrations\\20250502203352_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F63B7130-2511-4CF5-9FB0-F3F695AC9918}|GahuahwaMainService.csproj|solutionrelative:migrations\\20250502203352_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F63B7130-2511-4CF5-9FB0-F3F695AC9918}|GahuahwaMainService.csproj|c:\\users\\kerry\\devprojects\\web\\mangahuahwa-bookmarker\\backend\\gahuahwamainservice\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F63B7130-2511-4CF5-9FB0-F3F695AC9918}|GahuahwaMainService.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Kerry\\DevProjects\\web\\Mangahuahwa-bookmarker\\backend\\GahuahwaMainService\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Kerry\\DevProjects\\web\\Mangahuahwa-bookmarker\\backend\\GahuahwaMainService\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-02T20:35:36.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20250502203352_initialMigration.cs",
-              "DocumentMoniker": "C:\\Users\\Kerry\\DevProjects\\web\\Mangahuahwa-bookmarker\\backend\\GahuahwaMainService\\Migrations\\20250502203352_initialMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250502203352_initialMigration.cs",
-              "ToolTip": "C:\\Users\\Kerry\\DevProjects\\web\\Mangahuahwa-bookmarker\\backend\\GahuahwaMainService\\Migrations\\20250502203352_initialMigration.cs",
-              "RelativeToolTip": "Migrations\\20250502203352_initialMigration.cs",
+              "Title": "20250530115436_UsernameIsAddedInUser.cs",
+              "DocumentMoniker": "C:\\Users\\Kerry\\DevProjects\\web\\Mangahuahwa-bookmarker\\backend\\GahuahwaMainService\\Migrations\\20250530115436_UsernameIsAddedInUser.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250530115436_UsernameIsAddedInUser.cs",
+              "ToolTip": "C:\\Users\\Kerry\\DevProjects\\web\\Mangahuahwa-bookmarker\\backend\\GahuahwaMainService\\Migrations\\20250530115436_UsernameIsAddedInUser.cs",
+              "RelativeToolTip": "Migrations\\20250530115436_UsernameIsAddedInUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T20:33:52.935Z",
+              "WhenOpened": "2025-05-30T11:54:36.728Z",
               "EditorCaption": ""
             },
             {
@@ -58,9 +45,22 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Kerry\\DevProjects\\web\\Mangahuahwa-bookmarker\\backend\\GahuahwaMainService\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T20:18:19.519Z",
+              "WhenOpened": "2025-05-30T10:32:37.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Kerry\\DevProjects\\web\\Mangahuahwa-bookmarker\\backend\\GahuahwaMainService\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Kerry\\DevProjects\\web\\Mangahuahwa-bookmarker\\backend\\GahuahwaMainService\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T10:31:15.439Z",
               "EditorCaption": ""
             }
           ]
