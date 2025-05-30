@@ -41,6 +41,13 @@ if (app.Environment.IsDevelopment()) {
 
 app.UseHttpsRedirection();
 
+#region Config. CORS
+app.UseCors(options => options.WithOrigins("http://localhost:4200")
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+#endregion
+
+
 app.UseAuthorization();
 
 app.MapControllers();
@@ -54,8 +61,8 @@ app.MapPost("/api/signup", async (
     [FromBody] UserRegistrationModel userRegistrationModel
 ) => {
     IdentityUser user = new IdentityUser() {
-        Email = userRegistrationModel.Email,
         UserName = userRegistrationModel.UserName,
+        Email = userRegistrationModel.Email,
     };
     var result = await UserManager.CreateAsync(user, userRegistrationModel.Password);
     
@@ -67,9 +74,3 @@ app.MapPost("/api/signup", async (
 });
 
 app.Run();
-
-public class UserRegistrationModel {
-    public string Email { get; set; }
-    public string Password { get; set; }
-    public string UserName { get; set; }
-}
