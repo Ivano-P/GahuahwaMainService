@@ -1,3 +1,5 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 using GahuahwaMainService.Data;
 using GahuahwaMainService.Models;
@@ -64,8 +66,6 @@ app.UseCors(options => options.WithOrigins("http://localhost:4200")
         .AllowAnyHeader());
 #endregion
 
-// app.AddAuthentication()
-
 app.UseAuthorization();
 
 app.MapControllers();
@@ -89,6 +89,28 @@ app.MapPost("/api/signup", async (
     } else {
         return Results.BadRequest(result);
     }
+});
+
+app.MapPost("/api/signin", async (
+    UserManager<IdentityUser> UserManager, 
+    [FromBody] LoginModel loginModel) => {
+        var user = await UserManager.FindByEmailAsync(loginModel.Email);
+        if (user != null && await UserManager.CheckPasswordAsync(user, loginModel.Password)) {
+            var signInKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder
+                .Configuration["AppSettings:JWTSecret"]!));
+            var tokenDescriptor = new SecurityTokenDescriptor {
+                Subject = new ClaimsIdentity(new Claim[] {
+                    new Claim(@"UserId", user.Id.ToString())
+                }),
+                Expires = DateTime.UtcNow.AddDays(14),
+                SigningCredentials = new SigningCredentials(signInKey, SecurityAlgorithms.HmacSha256Signature)
+            };
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var securityToken = tokenHandler.CreateToken(tokenDescriptor);
+            var token = tokenHandler.WriteToken(securityToken);
+            return Results.Ok(new { token });
+            
+        }else return Results.BadRequest(new { message = "Username or password is incorrect" });
 });
 
 app.Run();
